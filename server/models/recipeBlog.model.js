@@ -7,7 +7,19 @@ const recipeSchema = new mongoose.Schema({
         ref: "User", //basically means this will be a user from User model (foreign key)
         required: true
     },
+    dishName: {
+        type: String,
+        required: true
+    },
+    ingredients: {
+        type: [String],
+        required: true
+    },
     recipe: {
+        type: [String],
+        required: true
+    },
+    image: {
         type: String,
         required: true
     }
