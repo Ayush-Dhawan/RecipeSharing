@@ -1,7 +1,10 @@
-import React from 'react'
+
+import Navbar from '../ui/Navbar'
 
 export default function Home() {
   return (
+    <>
+    <Navbar />
     <div className="hero min-h-screen bg-base-200">
   <div className="hero-content text-center">
     <div className="max-w-[35rem]">
@@ -11,5 +14,6 @@ export default function Home() {
     </div>
   </div>
 </div>
+    </>
   )
 }

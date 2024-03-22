@@ -5,6 +5,7 @@ export default async function readRecipes(req, res) {
         const recipes = await Recipe.find({}); // Fetch all recipes from the database
         if(recipes)res.status(200).json(recipes); // Send the fetched recipes as a JSON response
         else console.log("could not fetch recipes")
+        return recipes
     } catch (error) {
         console.log("Error in recipe read controller: ", error.message);
         res.status(500).json({ error: "Internal server error" });
@@ -16,3 +17,5 @@ export default async function readRecipes(req, res) {
 // export default async function hello(req, res){
 //     res.status(200).json("hello")
 // }
+
+
