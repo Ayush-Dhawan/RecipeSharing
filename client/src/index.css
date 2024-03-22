@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card-scrollbar-hide::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .styled-scrollbar::-webkit-scrollbar{
+    background-color: rgb(245, 200, 142);
+    width: 0.35em;
+    border-radius: 20px;
+  }
+  .styled-scrollbar::-webkit-scrollbar-thumb{
+    background-color: rgb(250, 165, 54);
+    border-radius: 20px;
+  }

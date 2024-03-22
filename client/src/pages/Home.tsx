@@ -1,4 +1,5 @@
 
+import { NavLink } from 'react-router-dom'
 import Navbar from '../ui/Navbar'
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
     <div className="max-w-[35rem]">
       <h1 className="text-5xl font-bold">Hello there</h1>
       <p className="py-6">"Join our vibrant recipe sharing community! Explore a world of culinary delights as you browse through a diverse collection of user-generated recipes. Share your own culinary creations and inspire others to embark on flavorful journeys."</p>
-      <button className="btn btn-primary">Get Started</button>
+      <NavLink to={'/recipes'}><button className="btn btn-primary">Get Started</button></NavLink>
     </div>
   </div>
 </div>

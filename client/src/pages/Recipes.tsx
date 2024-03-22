@@ -2,10 +2,14 @@ import React from 'react'
 import Navbar from '../ui/Navbar'
 import RecipeCard from '../ui/RecipeCard'
 import useGetRecipes from '../hooks/recipe/useGetRecipes'
+import { useNavigate } from 'react-router-dom'
 
 export default function Recipes() {
+  const navigate = useNavigate();
     const {recipes} = useGetRecipes();
     console.log("recipes:", recipes)
+
+    if(!localStorage.getItem('username-recipe-app')) navigate('/login')
   return (
     <>
       <Navbar />
