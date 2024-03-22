@@ -24,7 +24,6 @@ export function useLogin(username: string, password: string){
 }
 
 async function loginApi(username: string, password: string){
-    console.log("loginapi: ", username, password)
     try {
         const res = await fetch("/api/auth/login",{
             method: 'POST',

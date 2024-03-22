@@ -8,6 +8,8 @@ import {Toaster} from 'react-hot-toast'
 import ParticularRecipe from './pages/ParticularRecipe'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import UserProfile from './pages/UserProfile'
+import { useEffect, useState } from 'react'
 
 function App() {
 
@@ -28,6 +30,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
+          <Route path='/user/:username' element={<UserProfile />} />
           <Route path='/recipes' element={<Recipes />} />
           <Route path='/recipe/:id' element={<ParticularRecipe />} />
         </Routes>

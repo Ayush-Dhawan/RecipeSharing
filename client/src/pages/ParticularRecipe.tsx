@@ -26,7 +26,7 @@ export default function ParticularRecipe() {
   if(!localStorage.getItem('username-recipe-app')) navigate('/login')
 
   return (
-<div className='h-screen w-screen flex items-center justify-center bg-[#574128]'>
+<div className='h-screen w-screen flex items-center justify-center bg-base-content'>
 <div className="card lg:card-side h-[90%] w-[90%] bg-base-100 shadow-xl card-scrollbar-hide overflow-scroll">
 <figure className=' w-[40%] rounded-md flex items-center justify-center'>
   <img className='rounded-md' src={recipe?.image} alt="Album" />
