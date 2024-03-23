@@ -1,6 +1,15 @@
 import React from 'react'
+import useGetRecipesOfaUser from '../hooks/recipe/useGetRecipesOfaUser'
 
 export default function RecipesTable() {
+  const currentUrl = window.location.href;
+// Split the URL by "/"
+  const urlParts = currentUrl.split("/");
+ // The last part of the URL should be the ID
+  const username = urlParts[urlParts.length - 1];
+
+  const {data, isLoading} = useGetRecipesOfaUser(username);
+  console.log(data, isLoading);
   return (
     <div className="overflow-x-auto w-[50vw]">
   <table className="table">
@@ -8,24 +17,26 @@ export default function RecipesTable() {
     <thead>
       <tr>
         <th></th>
-        <th>Recipe</th>
+        <th>Your Recipes</th>
         <th><button className="btn btn-ghost btn-sm">Add new recipe</button></th>
       </tr>
     </thead>
-    <tbody>
+    <tbody className='overflow-y-auto styled-scrollbar'>
       {/* row 1 */}
-      <tr>
+      {data?.map((recipe: any) => {
+        return(
+          <tr>
         <th>
         </th>
         <td>
           <div className="flex items-center gap-3">
             <div className="avatar">
               <div className="mask mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+                <img src={recipe.image} alt="image" />
               </div>
             </div>
             <div>
-              <div className="font-bold">DishName</div>
+              <div className="font-bold capitalize">{recipe.dishName}</div>
               {/* <div className="text-sm opacity-50">United States</div> */}
             </div>
           </div>
@@ -37,6 +48,8 @@ export default function RecipesTable() {
           <button className="btn btn-ghost btn-xs">delete</button>
         </th>
       </tr>
+        )
+      })}
       
 
 

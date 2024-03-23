@@ -1,6 +1,7 @@
 import express from "express";  
 import protectRoute from "../middleware/protectedRoutes.js";
 import User from "../models/user.model.js";
+import readRecipesOfGivenUser from "./recipeControllers/readRecipesOfGivenUser.js";
 
 
 const router = express.Router();
