@@ -6,7 +6,7 @@
     width: 0;
   }
 
-  .r::-webkit-scrollbar{
+  .styled-scrollbar::-webkit-scrollbar{
     background-color: rgb(245, 200, 142);
     width: 0.35em;
     border-radius: 20px;

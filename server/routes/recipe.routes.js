@@ -5,6 +5,7 @@ import readRecipes from "./recipeControllers/readRecipes.js";
 import editRecipe from "./recipeControllers/editRecipe.js";
 import readRecipeByID from "./recipeControllers/readRecipeByID.js";
 import readRecipesOfGivenUser from "./recipeControllers/readRecipesOfGivenUser.js";
+import deleteRecipe from "./recipeControllers/deleteRecipe.js";
 
 
 
@@ -15,6 +16,7 @@ router.get('/recipes/:username',  readRecipesOfGivenUser)
 router.post('/add',addRecipe);
 router.put('/edit/:id',  editRecipe);
 router.get('/:id', readRecipeByID);
+router.delete('/:id', deleteRecipe)
 
 
 

@@ -2,13 +2,15 @@ import express from "express";
 import protectRoute from "../middleware/protectedRoutes.js";
 import User from "../models/user.model.js";
 import readRecipesOfGivenUser from "./recipeControllers/readRecipesOfGivenUser.js";
+import getIDbyUsername, { getIDfromParams } from "./userControllers/getIDbyUsername.js";
 
 
 const router = express.Router();
 
 router.post('/:username', getUserByUsername);
 router.put('/:username', updateUserProfile);
-
+router.get(`/userID/`, getIDbyUsername)
+router.get('/user/:username', getIDfromParams)
 export default router;
 
 

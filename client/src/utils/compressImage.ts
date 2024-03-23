@@ -45,7 +45,7 @@ export default async function compressImage(dataUrl: any): Promise<string> {
                     const base64data = reader.result as string;
                     resolve(base64data);
                 };
-            }, 'image/jpeg', 0.7); // Adjust quality (0.7 is 70% quality)
+            }, 'image/jpeg', 0.6); // Adjust quality (0.7 is 70% quality)
         };
         img.onerror = reject;
     });

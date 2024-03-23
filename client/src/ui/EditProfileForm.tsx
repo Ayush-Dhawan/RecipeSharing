@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useLogin } from '../hooks/auth/useLogin';
-import toast from 'react-hot-toast';
-import useGetUserByUsername from '../hooks/users/useGetUserByUsername';
 import useUpdateUser from '../hooks/users/useUpdateUser';
-import ImageInput from './ImageInput';
-import ConvertImageToURL from '../utils/ConvertImageToURL';
+
 import compressImage from '../utils/compressImage';
 
 export default function EditProfileForm({user}: {user:any}) {

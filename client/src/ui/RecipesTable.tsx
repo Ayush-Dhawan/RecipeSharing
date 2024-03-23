@@ -1,5 +1,7 @@
 import React from 'react'
 import useGetRecipesOfaUser from '../hooks/recipe/useGetRecipesOfaUser'
+import AddRecipeModal from './AddRecipeModal';
+import DeleteRecipeModal from './DeleteRecipeModal';
 
 export default function RecipesTable() {
   const currentUrl = window.location.href;
@@ -18,7 +20,8 @@ export default function RecipesTable() {
       <tr>
         <th></th>
         <th>Your Recipes</th>
-        <th><button className="btn btn-ghost btn-sm">Add new recipe</button></th>
+        {/* <th><button className="btn btn-ghost btn-sm">Add new recipe</button></th> */}
+        <th><AddRecipeModal /></th>
       </tr>
     </thead>
     <tbody className='overflow-y-auto styled-scrollbar'>
@@ -45,7 +48,7 @@ export default function RecipesTable() {
         
         <th>
           <button className="btn btn-ghost btn-xs">edit</button>
-          <button className="btn btn-ghost btn-xs">delete</button>
+          <DeleteRecipeModal recipeID={recipe._id}/>
         </th>
       </tr>
         )

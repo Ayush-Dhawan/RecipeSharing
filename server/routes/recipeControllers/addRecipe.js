@@ -2,8 +2,8 @@ import Recipe from "../../models/recipeBlog.model.js";
  
  const addRecipe = async(req, res)=> {
     try {
-        const {dishName, ingredients, recipe, image} = req.body;
-        const authorID = req.user._id;
+        const {authorID, dishName, ingredients, recipe, image} = req.body;
+
 
         const newRecipe = new Recipe({
             authorID,
@@ -28,7 +28,7 @@ import Recipe from "../../models/recipeBlog.model.js";
 
     } catch (error) {
         console.log("Error in recipe add controller: ", error.message);
-        res.status(500).json({error: "Internal server error"});
+        res.status(500).json({error: `Internal server error ${authorID}`});
     }
 }
 
