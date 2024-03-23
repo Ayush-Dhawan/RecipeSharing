@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import ConvertCommaSeperatedStringToArray from '../utils/ConvertCommaSeperatedStringToArray';
 import convertDotSeperatedStringToArray from '../utils/convertDotSeperatedStringToArray';
 import compressImage from '../utils/compressImage';
@@ -42,14 +42,20 @@ export default function AddRecipeForm() {
         const recipe = convertDotSeperatedStringToArray(Recipe);
         //@ts-ignore
         addRecipe({authorID, dishName, ingredients, recipe, image})
+        const modal = document.getElementById("my_modal_2") as HTMLDialogElement;
+        modal.close();
+
+          // Reset the form
+          const form = document.getElementById("add-recipe-form") as HTMLFormElement;
+          form.reset();
     }
   return (
-    <form onSubmit={handleSubmit} className="card-body styled-scrollbar">
+    <form id='add-recipe-form' onSubmit={handleSubmit} className="card-body styled-scrollbar">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Dish Name</span>
           </label>
-          <input type="text" value={dishName} onChange={(e)=>setDishName(e.target.value)}  placeholder="dishname..." className="input input-bordered" required />
+          <input type="text"  onChange={(e)=>setDishName(e.target.value)}  placeholder="dishname..." className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">

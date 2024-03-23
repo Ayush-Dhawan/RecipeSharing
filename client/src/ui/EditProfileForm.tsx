@@ -35,10 +35,10 @@ export default function EditProfileForm({user}: {user:any}) {
   const {updateUser, isUpdatingUser} = useUpdateUser(username, fullName, gender, profilePic);
   function handleSubmit(e: any){
     e.preventDefault();
-      // console.log("submitted", username, fullName,  gender)
-       
         //@ts-ignore
         updateUser();
+        const modal = document.getElementById("my_modal_3") as HTMLDialogElement;
+        modal.close();
     }
     return (
       <div>
