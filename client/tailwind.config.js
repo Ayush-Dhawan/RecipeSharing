@@ -15,6 +15,6 @@ const config = {
 module.exports = {
   ...config,
   daisyui: {
-    themes: ["light", "dark", "coffee", "cupcake"],
+    themes: ["light", "dark", "coffee", "cupcake", "cyberpunk"],
   },
 };
