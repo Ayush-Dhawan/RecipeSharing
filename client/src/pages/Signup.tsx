@@ -14,7 +14,6 @@ export default function Signup() {
     const {signUp} = useSignUp(username, fullName, password, confirmPassword, gender);
 
     function handleSubmit(e: any){
-      console.log(username, fullName, password, confirmPassword, gender)
         e.preventDefault();
         if(!username || !password || !fullName || !confirmPassword || !gender) {
             toast.error("please fill in the form before submitting");

@@ -13,7 +13,6 @@ export default function useGetRecipeByID(id: string){
 
     try {
         const res = await fetch(`/api/recipe/${id}`)
-        console.log("res", res)
         const data = await res.json();
 
         if (!res.ok) {

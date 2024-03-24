@@ -17,7 +17,6 @@ export default function useAddRecipe() {
 }
 
 async function helper({authorID, dishName, ingredients, recipe, image}: {authorID:string, dishName: string, ingredients: [string], recipe: [string], image: string}){
-    console.log(authorID, dishName, ingredients,  recipe,  "this is helper")
     try {
         const res = await fetch("/api/recipe/add", {
             method: "POST",

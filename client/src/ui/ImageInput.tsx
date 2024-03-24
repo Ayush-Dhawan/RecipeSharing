@@ -17,7 +17,6 @@ function ImageInput({state, setState}: {state: string, setState: React.Dispatch<
     const reader = new FileReader();
     reader.onload = () => {
       const dataURL = reader.result as string;
-      console.log('Image converted to data URL:', dataURL);
       // Convert the data URL to a shorter Base64-encoded string
       const base64String = dataURL.split(',')[1];
       setState(base64String); // Set state with the shortened Base64 string

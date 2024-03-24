@@ -20,7 +20,6 @@ export default function useUpdateUser(username: string, fullName: string,  gende
 }
 
 async function updateUserbyUsername(username: string, fullName: string, gender: string, profilePic: string) {
-    console.log("username in mutate", fullName);
     try {
         const res = await fetch(`/api/user/${username}`, {
             method: "PUT",

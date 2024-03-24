@@ -8,7 +8,6 @@ export default function UserData() {
     const username = urlParts[urlParts.length - 1];// The last part of the URL should be the username
 
     const {user} = useGetUserByUsername(username);
-    console.log(user)
   return (
     <div className="hero-content flex-col lg:flex-row  shadow-md shadow-primary rounded-lg">
     <img src={user?.profilePic} className="max-w-sm h-32  rounded-xl shadow-2xl" />

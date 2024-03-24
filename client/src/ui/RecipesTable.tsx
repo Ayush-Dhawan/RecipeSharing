@@ -2,6 +2,7 @@ import React from 'react'
 import useGetRecipesOfaUser from '../hooks/recipe/useGetRecipesOfaUser'
 import AddRecipeModal from './AddRecipeModal';
 import DeleteRecipeModal from './DeleteRecipeModal';
+import EditRecipeModal from './EditRecipeModal';
 
 export default function RecipesTable() {
   const currentUrl = window.location.href;
@@ -11,7 +12,6 @@ export default function RecipesTable() {
   const username = urlParts[urlParts.length - 1];
 
   const {data, isLoading} = useGetRecipesOfaUser(username);
-  console.log(data, isLoading);
   return (
     <div className="overflow-x-auto w-[50vw]">
   <table className="table">
@@ -47,7 +47,7 @@ export default function RecipesTable() {
         
         
         <th>
-          <button className="btn btn-ghost btn-xs">edit</button>
+          <EditRecipeModal recipe={recipe} />
           <DeleteRecipeModal recipeID={recipe._id}/>
         </th>
       </tr>

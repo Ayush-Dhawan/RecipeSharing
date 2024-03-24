@@ -32,7 +32,7 @@ async function loginApi(username: string, password: string){
             },
             body: JSON.stringify({ username, password })
         });
-        console.log("res", res)
+
         const data = await res.json();
 
         if (!res.ok) {

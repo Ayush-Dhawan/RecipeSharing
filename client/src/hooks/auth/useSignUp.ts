@@ -32,10 +32,10 @@ async function SignupApi(fullName: string, username: string, password: string, c
             },
             body: JSON.stringify({ fullName, username, password, confirmPassword, gender })
         });
-        console.log("res", res)
+    
         const data = await res.json();
 
-        console.log("data from api", data)
+        
         if (!res.ok) {
             throw new Error(data.error );
         }

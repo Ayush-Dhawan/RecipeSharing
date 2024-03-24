@@ -14,7 +14,6 @@ export default function useGetRecipes(){
  async function getAllRecipes(){
     try {
         const res = await fetch("/api/recipe");
-        console.log("res", res)
         const data = await res.json();
 
         if (!res.ok) {
