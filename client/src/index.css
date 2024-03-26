@@ -7,11 +7,11 @@
   }
 
   .styled-scrollbar::-webkit-scrollbar{
-    background-color: rgb(245, 200, 142);
+    background-color: rgb(170, 207, 238);
     width: 0.35em;
     border-radius: 20px;
   }
   .styled-scrollbar::-webkit-scrollbar-thumb{
-    background-color: rgb(250, 165, 54);
+    background-color: rgb(54, 162, 250);
     border-radius: 20px;
   }

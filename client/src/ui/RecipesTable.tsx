@@ -11,7 +11,7 @@ export default function RecipesTable() {
  // The last part of the URL should be the ID
   const username = urlParts[urlParts.length - 1];
 
-  const {data, isLoading} = useGetRecipesOfaUser(username);
+  const {data} = useGetRecipesOfaUser(username);
   return (
     <div className="overflow-x-auto w-[50vw]">
   <table className="table">

@@ -6,7 +6,7 @@ export default function AddRecipeModal() {
     <div>
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
       {/* @ts-ignore */}
-      <button className="btn btn-primary btn-sm" onClick={() => document.getElementById('my_modal_2').showModal()}>Add new recipe</button>
+      <button className="btn btn-primary btn-md" onClick={() => document.getElementById('my_modal_2').showModal()}>Add new recipe</button>
       <dialog id="my_modal_2" className="modal w-full ">
         <div className="modal-box w-11/12 max-w-5xl  styled-scrollbar overflow-auto">
           <form method="dialog">
