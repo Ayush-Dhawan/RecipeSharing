@@ -3,7 +3,7 @@ import Recipe from "../../models/recipeBlog.model.js";
 export default async function readRecipeByID(req, res) {
     const { id } = req.params;
     try {
-        const recipe = await Recipe.findById(id); // Find recipe by _id
+        const recipe = await Recipe.findById(id);
         if (recipe) {
             res.status(200).json(recipe); // Send the fetched recipe as a JSON response
         } else {

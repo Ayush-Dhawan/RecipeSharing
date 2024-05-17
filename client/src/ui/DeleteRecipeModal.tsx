@@ -14,7 +14,7 @@ export default function DeleteRecipeModal({recipeID}: {recipeID: string}) {
     <div>
         {/* Open the modal using document.getElementById('ID').showModal() method */}
         {/* @ts-ignore */}
-        <button className="btn btn-ghost btn-xs" onClick={()=>document.getElementById(`my_modal_${recipeID}`).showModal()}>Delete Recipe</button>
+        <button className="btn text-gray-200 bg-red-500 btn-xs" onClick={()=>document.getElementById(`my_modal_${recipeID}`).showModal()}>Delete Recipe</button>
         <dialog id={`my_modal_${recipeID}`} className="modal">
         <div className="modal-box">
             <h3 className="font-bold text-lg">Confirm <span className='text-red-500'>Deleting</span> the recipe!</h3>
