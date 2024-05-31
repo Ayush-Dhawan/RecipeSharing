@@ -1,16 +1,17 @@
 import express from 'express';
 import dotenv from "dotenv";
+dotenv.config();
 import dbconnect from "./db/dbconnect.js";
 import cookieParser from "cookie-parser";
 import authRoutes from './routes/auth.routes.js'
 import recipeRoutes from './routes/recipe.routes.js'
 import userRoutes from './routes/user.routes.js'
-import {PORT} from './env_variables.js'
 
-const app = express()
+
+const PORT = process.env.PORT;
+const app = express() 
 app.use(express.json()) 
 
-dotenv.config();
 app.use(cookieParser())
 
 // const PORT = process.env.PORT || 5000;

@@ -1,5 +1,9 @@
 import jwt from 'jsonwebtoken'
-import { JWT_SECRET } from '../env_variables.js';
+import dotenv from "dotenv";
+dotenv.config();
+
+
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const generateCookieAndSetToken = (userId, res) => {
     const token = jwt.sign({userId}, JWT_SECRET , { expiresIn: '15d'});
